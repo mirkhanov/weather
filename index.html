@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Weather</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <div class="NAV">
+        <div class="container">
+            <div class="search">
+                <h2 class="logo upper"> My Weather</h2>
+                <div class="searching">
+                    <input type="text" id="searchs" value="">
+                    <button id="btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="TABS_Wrapper">
+        <div class="container">
+            <div class="tabs">
+                <div class="Today tab" id="TodayBtn">
+                    <p>Today</p>
+                </div>
+                <div class="5-day tab" id="dayforecasts">
+                    <p>5-day Forecast</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="Current" id="CurrentWt">
+            <div class="Current_weather">
+                <h4 class="upper">Current weather</h4>
+
+                <div class="curr">
+                    <div id="icons"></div>
+                    <div class="Realf">
+                        <h1 class="" id="data"></h1>
+                        <p id="Feel"></p>
+                    </div>
+                    <div id="time">
+                        <div id="sunrise"></div>
+                        <div id="sunset"></div>
+                        <div id="duration"></div>
+                    </div>
+                </div>
+                <div class="upper" id="Today"></div>
+            </div>
+
+        </section>
+
+        <section class="Hourly" id="hourly">
+            <div>
+                <h4 class="upper">3 Hours</h4>
+            </div>
+            <div class="weather_forecast">
+                <div class="Forecast" id="forecast">
+                    <p class="td">Today/Tomorrow</p>
+                    <p class="transparent">Forecast</p>
+                    <p class="transparent">Temp (&#x2103;)</p>
+                    <p class="transparent">Real Feel</p>
+                    <p class="transparent">Wind (km/h)</p>
+                </div>
+                <div class="Weather_col">
+                    <div class="Weather">
+                        <div id="times">
+
+                        </div>
+                        <div id="Icons" class="Icons">
+
+                        </div>
+                        <div id="temp">
+
+                        </div>
+                        <div id="feel">
+
+                        </div>
+                        <div id="speed">
+
+                        </div>
+                    </div>
+                    <div class="Weather">
+                        <div id="times2">
+
+                        </div>
+                        <div id="Icons2" class="Icons">
+
+                        </div>
+                        <div id="temp2">
+
+                        </div>
+                        <div id="feel2">
+
+                        </div>
+                        <div id="speed2">
+
+                        </div>
+                    </div>
+                    <div class="Weather">
+                        <div id="times3">
+
+                        </div>
+                        <div id="Icons3" class="Icons">
+
+                        </div>
+                        <div id="temp3">
+
+                        </div>
+                        <div id="feel3">
+
+                        </div>
+                        <div id="speed3">
+
+                        </div>
+                    </div>
+                    <div class="Weather">
+                        <div id="times4">
+
+                        </div>
+                        <div id="Icons4" class="Icons">
+
+                        </div>
+                        <div id="temp4">
+
+                        </div>
+                        <div id="feel4">
+
+                        </div>
+                        <div id="speed4">
+
+                        </div>
+                    </div>
+                    <div class="Weather">
+                        <div id="times5">
+
+                        </div>
+                        <div id="Icons5" class="Icons">
+
+                        </div>
+                        <div id="temp5">
+
+                        </div>
+                        <div id="feel5">
+
+                        </div>
+                        <div id="speed5">
+
+                        </div>
+                    </div>
+                    <div class="Weather"></div>
+                    <div class="Weather"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="Nearby" id="near">
+            <div>
+                <h4 class="upper">Nearby places</h4>
+            </div>
+            <div class="nearct">
+                <div class="near" id="nears">
+
+                </div>
+                <div class="near" id="nears2">
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="daysBlock">
+            <div class="cards">
+                <div class="days" id="day0"></div>
+                <div class="days" id="day1"></div>
+                <div class="days" id="day2"></div>
+                <div class="days" id="day3"></div>
+                <div class="days" id="day4"></div>
+            </div>
+            <section class="Hourly" id="hourly">
+                <div>
+                    <h4 class="upper">3 Hours</h4>
+                </div>
+                <div class="weather_forecast">
+                    <div class="Forecast" id="forecast">
+                        <p class="td">Today/Tomorrow</p>
+                        <p class="transparent">Forecast</p>
+                        <p class="transparent">Temp (&#x2103;)</p>
+                        <p class="transparent">Real Feel</p>
+                        <p class="transparent">Wind (km/h)</p>
+                    </div>
+                    <div class="Weather_col">
+                        <div class="Weather">
+                            <div id="times">
+
+                            </div>
+                            <div id="Icons" class="Icons">
+
+                            </div>
+                            <div id="temp">
+
+                            </div>
+                            <div id="feel">
+
+                            </div>
+                            <div id="speed">
+
+                            </div>
+                        </div>
+                        <div class="Weather">
+                            <div id="times2">
+
+                            </div>
+                            <div id="Icons2" class="Icons">
+
+                            </div>
+                            <div id="temp2">
+
+                            </div>
+                            <div id="feel2">
+
+                            </div>
+                            <div id="speed2">
+
+                            </div>
+                        </div>
+                        <div class="Weather">
+                            <div id="times3">
+
+                            </div>
+                            <div id="Icons3" class="Icons">
+
+                            </div>
+                            <div id="temp3">
+
+                            </div>
+                            <div id="feel3">
+
+                            </div>
+                            <div id="speed3">
+
+                            </div>
+                        </div>
+                        <div class="Weather">
+                            <div id="times4">
+
+                            </div>
+                            <div id="Icons4" class="Icons">
+
+                            </div>
+                            <div id="temp4">
+
+                            </div>
+                            <div id="feel4">
+
+                            </div>
+                            <div id="speed4">
+
+                            </div>
+                        </div>
+                        <div class="Weather">
+                            <div id="times5">
+
+                            </div>
+                            <div id="Icons5" class="Icons">
+
+                            </div>
+                            <div id="temp5">
+
+                            </div>
+                            <div id="feel5">
+
+                            </div>
+                            <div id="speed5">
+
+                            </div>
+                        </div>
+                        <div class="Weather"></div>
+                        <div class="Weather"></div>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+
+
+        <div class="Ntf" id="ntf">
+
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

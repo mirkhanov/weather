@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(218, 216, 216);
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+}
+section{
+    background-color: hsl(0, 0%, 97%);
+    margin: 20px 0 20px 0;
+    padding: 20px;
+
+}
+.upper{
+    text-transform: uppercase;
+    color: rgb(2, 177, 177);
+    font-weight: 700;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+.transparent{
+    color: rgba(0, 0, 0, .4);
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 25px 0;
+}
+.NAV{
+    background-color: hsl(0, 0%, 97%);
+}
+.tabs{
+    display: flex;
+    color: #fff;
+    gap: 30px;
+    width: 100%;
+}
+.TABS_Wrapper{
+    background-color: rgb(43, 42, 42);
+}
+.Current_weather{
+    display: flex;
+    justify-content: space-between;
+}
+.tab{
+    font-size: 16px;
+    cursor: pointer;
+    transition:all .3s linear;
+    padding: 15px 5px;
+    border-bottom: 3px solid transparent;
+}
+.tab:hover{
+    border-bottom: 3px solid cadetblue
+}
+.Weather{
+    display: flex;
+}
+.nearct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(223, 223, 223);   
+    margin: 10px 0 10px 0;
+    padding: 5px 10px 5px 10px;
+    align-items: center;
+}
+.flexy{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+.near{
+    font-size: 18px;
+    margin: 0 20px 0 20px;
+    width: 400px;
+}
+#first img{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+.Forecast p{
+    padding-bottom: 20px;
+}
+.Hourly h4{
+    padding-bottom: 20px;
+}
+.td{
+    font-weight: 700;
+}
+#btn{
+    border: none;
+    color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+#searchs{
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 230px;
+}
+.searching{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    height: 25px;
+}
+.Realf{
+    text-align: center;
+}
+
+.iconss{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.curr{
+    padding-top: 50px;
+    display: flex;
+    gap: 225px;
+    justify-content: space-between;
+}
+#data{
+    font-size: 35px;
+}
+
+#Feel{
+    font-size: 18px;
+}
+.Forecast{
+    padding-left: 25px;
+}
+.weather_forecast{
+    display: flex;
+    gap: 30px;
+}
+.Weather_col{
+    display: flex;
+    gap: 30px;
+}
+.Weather{
+    display: block;
+    gap: 30px;
+}
+.Ntf{
+    background-color: hsl(0, 0%, 97%);
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+#sunrise, #sunset, #duration{
+    padding: 5px 0 5px 0;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.days{
+    width: 200px;
+    height: 300px;
+    padding: 10px 20px;
+    background-color: hsl(0, 0%, 97%);
+}
+.days p{
+    padding-bottom: 10px;
+}
+.days p img{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+.errorMSG{
+    font-weight: 700;
+    font-size: 25px;
+    color: rgba(0, 0, 0, .6);
+}
+#daysBlock{
+    display: none;
+    padding: 0;
+    background-color: transparent;
+}
+.Icons{
+    padding-bottom: 18px;
+}
+.cardsSub{
+    color: rgba(0,0,0,0.2);
+    font-weight: 600;
+    font-size: 18px;
+}
