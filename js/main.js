@@ -244,14 +244,6 @@ btn.addEventListener('click', function () {
 
             console.log(data);
             td.style.paddingBottom = '100px';
-            if (!input.value === true) {
-                Data.innerHTML = ``;
-                feel.innerHTML = ``;
-                sunrise.innerHTML = ``;
-                sunset.innerHTML = ``;
-                Today.textContent = ``;
-                duration.innerHTML = ``;
-            } else {
                 Data.innerHTML = `<p>${Math.round(data.main.temp)}&#176C<p>`
                 feel.innerHTML = `<p>Real feel ${Math.round(data.main.feels_like)} &deg</p>`
                 sunrise.innerHTML = `<p>Sunrise:${getHours(data.sys.sunrise)}</p>`
@@ -302,7 +294,7 @@ btn.addEventListener('click', function () {
                 dayblock.style.display = 'none';
                 Ntf.style.display = 'none';
 
-            }
+           
 
 
         })
@@ -328,43 +320,6 @@ btn.addEventListener('click', function () {
         .then(data => {
 
             console.log(data)
-            //clear
-            if (!input.value === true) {
-                times.innerHTML = `<p></p>`
-                temp.innerHTML = `<p><p>`
-                Feel.innerHTML = `<p></p>`
-                speed.innerHTML = `<p></p>`
-                Icons0.innerHTML = `<p></p>`
-
-                //2
-                times2.innerHTML = `<p></p>`
-                temp2.innerHTML = `<p><p>`
-                Feel2.innerHTML = `<p></p>`
-                speed2.innerHTML = `<p></p>`
-                Icons1.innerHTML = `<p></p>`
-
-                //3
-                times3.innerHTML = `<p></p>`
-                temp3.innerHTML = `<p><p>`
-                Feel3.innerHTML = `<p></p>`
-                speed3.innerHTML = `<p></p>`
-                Icons2.innerHTML = `<p></p>`
-
-                //4
-                times4.innerHTML = `<p></p>`
-                temp4.innerHTML = `<p><p>`
-                Feel4.innerHTML = `<p></p>`
-                speed4.innerHTML = `<p></p>`
-                Icons3.innerHTML = `<p></p>`
-
-                //5
-                times5.innerHTML = `<p></p>`
-                temp5.innerHTML = `<p><p>`
-                Feel5.innerHTML = `<p></p>`
-                speed5.innerHTML = `<p></p>`
-                Icons4.innerHTML = `<p></p>`
-
-            } else {
                 //1
                 times.innerHTML = `<p style="padding-bottom:20px">${data.list[0].dt_txt}</p>`
                 temp.innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[0].main.temp)}&#176<p>`
@@ -557,9 +512,9 @@ btn.addEventListener('click', function () {
                                          <p>Clear</p>
    `
                 }
-            }
+            
 
-
+                // five days
             const monthNames = ["January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"
             ];
@@ -567,6 +522,139 @@ btn.addEventListener('click', function () {
                 "Sunday"
             ];
             //cards
+            day0.onclick = function(){
+                document.getElementById('timesdays').innerHTML = `<p style="padding-bottom:20px">${data.list[0].dt_txt}</p>`
+                document.getElementById('tempdays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[0].main.temp)}&#176<p>`
+                document.getElementById('feeldays').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[0].main.feels_like)} &deg</p>`
+                document.getElementById('speeddays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[0].wind.speed)} ESE</p>`
+                //2
+                document.getElementById('times2days').innerHTML = `<p style="padding-bottom:20px">${data.list[1].dt_txt}</p>`
+                document.getElementById('temp2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[1].main.temp)}&#176<p>`
+                document.getElementById('feel2days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[1].main.feels_like)} &deg</p>`
+                document.getElementById('speed2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[1].wind.speed)} ESE</p>`
+                //3
+                document.getElementById('times3days').innerHTML = `<p style="padding-bottom:20px">${data.list[2].dt_txt}</p>`
+                document.getElementById('temp3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[2].main.temp)}&#176<p>`
+                document.getElementById('feel3days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[2].main.feels_like)} &deg</p>`
+                document.getElementById('speed3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[2].wind.speed)} ESE</p>`
+                //4
+                document.getElementById('times4days').innerHTML = `<p style="padding-bottom:20px">${data.list[3].dt_txt}</p>`
+                document.getElementById('temp4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[3].main.temp)}&#176<p>`
+                document.getElementById('feel4days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[3].main.feels_like)} &deg</p>`
+                document.getElementById('speed4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[3].wind.speed)} ESE</p>`
+                //5
+                document.getElementById('times5days').innerHTML = `<p style="padding-bottom:20px">${data.list[4].dt_txt}</p>`
+                document.getElementById('temp5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[4].main.temp)}&#176<p>`
+                document.getElementById('feel5days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[4].main.feels_like)} &deg</p>`
+                document.getElementById('speed5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[4].wind.speed)} ESE</p>`
+            }
+
+            day1.onclick = function(){
+                document.getElementById('timesdays').innerHTML = `<p style="padding-bottom:20px">${data.list[5].dt_txt}</p>`
+                document.getElementById('tempdays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[5].main.temp)}&#176<p>`
+                document.getElementById('feeldays').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[5].main.feels_like)} &deg</p>`
+                document.getElementById('speeddays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[5].wind.speed)} ESE</p>`
+                //2
+                document.getElementById('times2days').innerHTML = `<p style="padding-bottom:20px">${data.list[6].dt_txt}</p>`
+                document.getElementById('temp2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[6].main.temp)}&#176<p>`
+                document.getElementById('feel2days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[6].main.feels_like)} &deg</p>`
+                document.getElementById('speed2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[6].wind.speed)} ESE</p>`
+                //3
+                document.getElementById('times3days').innerHTML = `<p style="padding-bottom:20px">${data.list[7].dt_txt}</p>`
+                document.getElementById('temp3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[7].main.temp)}&#176<p>`
+                document.getElementById('feel3days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[7].main.feels_like)} &deg</p>`
+                document.getElementById('speed3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[7].wind.speed)} ESE</p>`
+                //4
+                document.getElementById('times4days').innerHTML = `<p style="padding-bottom:20px">${data.list[8].dt_txt}</p>`
+                document.getElementById('temp4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[8].main.temp)}&#176<p>`
+                document.getElementById('feel4days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[8].main.feels_like)} &deg</p>`
+                document.getElementById('speed4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[8].wind.speed)} ESE</p>`
+                //5
+                document.getElementById('times5days').innerHTML = `<p style="padding-bottom:20px">${data.list[9].dt_txt}</p>`
+                document.getElementById('temp5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[9].main.temp)}&#176<p>`
+                document.getElementById('feel5days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[9].main.feels_like)} &deg</p>`
+                document.getElementById('speed5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[9].wind.speed)} ESE</p>`
+            }
+            day2.onclick = function(){
+                document.getElementById('timesdays').innerHTML = `<p style="padding-bottom:20px">${data.list[10].dt_txt}</p>`
+                document.getElementById('tempdays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[10].main.temp)}&#176<p>`
+                document.getElementById('feeldays').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[10].main.feels_like)} &deg</p>`
+                document.getElementById('speeddays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[10].wind.speed)} ESE</p>`
+                //2
+                document.getElementById('times2days').innerHTML = `<p style="padding-bottom:20px">${data.list[11].dt_txt}</p>`
+                document.getElementById('temp2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[11].main.temp)}&#176<p>`
+                document.getElementById('feel2days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[11].main.feels_like)} &deg</p>`
+                document.getElementById('speed2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[11].wind.speed)} ESE</p>`
+                //3
+                document.getElementById('times3days').innerHTML = `<p style="padding-bottom:20px">${data.list[12].dt_txt}</p>`
+                document.getElementById('temp3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[12].main.temp)}&#176<p>`
+                document.getElementById('feel3days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[12].main.feels_like)} &deg</p>`
+                document.getElementById('speed3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[12].wind.speed)} ESE</p>`
+                //4
+                document.getElementById('times4days').innerHTML = `<p style="padding-bottom:20px">${data.list[13].dt_txt}</p>`
+                document.getElementById('temp4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[13].main.temp)}&#176<p>`
+                document.getElementById('feel4days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[13].main.feels_like)} &deg</p>`
+                document.getElementById('speed4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[13].wind.speed)} ESE</p>`
+                //5
+                document.getElementById('times5days').innerHTML = `<p style="padding-bottom:20px">${data.list[14].dt_txt}</p>`
+                document.getElementById('temp5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[14].main.temp)}&#176<p>`
+                document.getElementById('feel5days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[14].main.feels_like)} &deg</p>`
+                document.getElementById('speed5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[14].wind.speed)} ESE</p>`
+            }
+            day3.onclick = function(){
+                document.getElementById('timesdays').innerHTML = `<p style="padding-bottom:20px">${data.list[15].dt_txt}</p>`
+                document.getElementById('tempdays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[15].main.temp)}&#176<p>`
+                document.getElementById('feeldays').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[15].main.feels_like)} &deg</p>`
+                document.getElementById('speeddays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[15].wind.speed)} ESE</p>`
+                //2
+                document.getElementById('times2days').innerHTML = `<p style="padding-bottom:20px">${data.list[16].dt_txt}</p>`
+                document.getElementById('temp2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[16].main.temp)}&#176<p>`
+                document.getElementById('feel2days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[16].main.feels_like)} &deg</p>`
+                document.getElementById('speed2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[16].wind.speed)} ESE</p>`
+                //3
+                document.getElementById('times3days').innerHTML = `<p style="padding-bottom:20px">${data.list[17].dt_txt}</p>`
+                document.getElementById('temp3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[17].main.temp)}&#176<p>`
+                document.getElementById('feel3days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[17].main.feels_like)} &deg</p>`
+                document.getElementById('speed3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[17].wind.speed)} ESE</p>`
+                //4
+                document.getElementById('times4days').innerHTML = `<p style="padding-bottom:20px">${data.list[18].dt_txt}</p>`
+                document.getElementById('temp4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[18].main.temp)}&#176<p>`
+                document.getElementById('feel4days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[18].main.feels_like)} &deg</p>`
+                document.getElementById('speed4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[18].wind.speed)} ESE</p>`
+                //5
+                document.getElementById('times5days').innerHTML = `<p style="padding-bottom:20px">${data.list[19].dt_txt}</p>`
+                document.getElementById('temp5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[19].main.temp)}&#176<p>`
+                document.getElementById('feel5days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[19].main.feels_like)} &deg</p>`
+                document.getElementById('speed5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[19].wind.speed)} ESE</p>`
+            }
+            day4.onclick = function(){
+                document.getElementById('timesdays').innerHTML = `<p style="padding-bottom:20px">${data.list[20].dt_txt}</p>`
+                document.getElementById('tempdays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[20].main.temp)}&#176<p>`
+                document.getElementById('feeldays').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[20].main.feels_like)} &deg</p>`
+                document.getElementById('speeddays').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[20].wind.speed)} ESE</p>`
+                //2
+                document.getElementById('times2days').innerHTML = `<p style="padding-bottom:20px">${data.list[21].dt_txt}</p>`
+                document.getElementById('temp2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[21].main.temp)}&#176<p>`
+                document.getElementById('feel2days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[21].main.feels_like)} &deg</p>`
+                document.getElementById('speed2days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[21].wind.speed)} ESE</p>`
+                //3
+                document.getElementById('times3days').innerHTML = `<p style="padding-bottom:20px">${data.list[22].dt_txt}</p>`
+                document.getElementById('temp3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[22].main.temp)}&#176<p>`
+                document.getElementById('feel3days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[22].main.feels_like)} &deg</p>`
+                document.getElementById('speed3days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[12].wind.speed)} ESE</p>`
+                //4
+                document.getElementById('times4days').innerHTML = `<p style="padding-bottom:20px">${data.list[23].dt_txt}</p>`
+                document.getElementById('temp4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[23].main.temp)}&#176<p>`
+                document.getElementById('feel4days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[23].main.feels_like)} &deg</p>`
+                document.getElementById('speed4days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[23].wind.speed)} ESE</p>`
+                //5
+                document.getElementById('times5days').innerHTML = `<p style="padding-bottom:20px">${data.list[24].dt_txt}</p>`
+                document.getElementById('temp5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[24].main.temp)}&#176<p>`
+                document.getElementById('feel5days').innerHTML = `<p  style="padding-bottom:20px"> ${Math.round(data.list[24].main.feels_like)} &deg</p>`
+                document.getElementById('speed5days').innerHTML = `<p style="padding-bottom:20px">${Math.round(data.list[24].wind.speed)} ESE</p>`
+            }
+
+
             day0.innerHTML = `
         <p class="upper" style="font-size: 20px">Tonight</p>
         <p class="cardsSub">${monthNames[today.getMonth()]} ${today.getDay()}</p>

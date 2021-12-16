@@ -179,6 +179,10 @@ section{
     height: 300px;
     padding: 10px 20px;
     background-color: hsl(0, 0%, 97%);
+    transition: .3s all linear;
+}
+.days:hover{
+    background-color: hsl(0, 3%, 85%);
 }
 .days p{
     padding-bottom: 10px;
